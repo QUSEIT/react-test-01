@@ -1,7 +1,4 @@
-## React
-
-> React技术测试
-
+## React 前端 综合能力基础题目 （普通水平）
 
 ### Tasks
 
