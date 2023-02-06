@@ -1,0 +1,7 @@
+@import '../../style/base.scss';
+.pagination{
+  height: unit(100px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

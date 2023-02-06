@@ -1,0 +1,45 @@
+@import '../../style/base.scss';
+.card{
+  background-color: #fff;
+  margin: unit(20px) unit(24px);
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 5px#ccc;
+  padding: unit(20px);
+  height: unit(350px);
+  .leftContent{
+    flex: 1;
+    margin-right: unit(50px);
+    .item{
+      display: flex;
+      padding: unit(10px) 0;
+      .title{
+        flex: 1;
+      }
+    }
+  }
+  .rightContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .btn{
+      margin: unit(30px) 0;
+      button{
+        height: unit(70px);
+        width: unit(100px);
+      }
+      .btnRed{
+        background-color: rgb(183, 43, 53);
+        border: none;
+        color: #fff;
+      }
+      .btnBlue{
+        background-color: rgb(65, 135, 242);
+        border: none;
+        color: #fff;
+      }
+    }
+  }
+}
