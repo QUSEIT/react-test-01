@@ -1,0 +1,9 @@
+@import '../../style/base.scss';
+.datePicker{
+  display: flex;
+  padding: unit(20px) unit(20px) unit(20px) 0;
+  border-bottom: 1px solid #ccc;
+  .word{
+    flex: 1;
+  }
+}
