@@ -1,39 +1,18 @@
-## React 前端 综合能力基础题目 （普通水平）
+## 本地开发
 
-### Tasks
+```bash
+yarn install
 
-根据设计图实现代码
+# 开发 打开http://localhost:9999
+yarn start
 
-> 图一
+# 构建
+yarn build
+```
 
-![](./screenshot/16443938469871.png)
+## 各阶段
 
-> 图二
+- 自主搭建环境配置 1.5h
+- 基于react [ice](https://ice.work/) + [ahooks](https://ahooks.js.org/) + [umi-request](https://github.com/umijs/umi-request) + [ant-mobile](https://mobile.ant.design/)开发 3h
+- 部署到阿里云oss 5m，线上访问 https://react-test-01.oss-cn-guangzhou.aliyuncs.com
 
-![](./screenshot/1644394435399.png)
-
-
-1. 能使用关键字进行搜索筛选。
-2. 可通过下单日期的选择区间筛选出来对应的Item。
-3. 列表有分页功能，如果能实现无限下拉加载更好。
-4. 包裹状态可以使用DropdownMenu来进行筛选(如图二类似即可)。
-
-
-### 基本要求如下
-
-- 本地可运行
-
-### 加分项
-
-- 请使用TypeScript
-- 请部署在合理空间/云平台上, 发布出来, 允许访问
-
-
-### 提交
-
-- 请 fork 仓库
-- 追加包含你姓名的成果说明文件:
-    + .md 格式
-    + 各阶段用时
-    + 本地开发部署说明
-- 然后, 提交 PR
