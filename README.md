@@ -14,4 +14,4 @@ yarn build
 
 - 自主搭建环境配置 1.5h
 - 基于react ice开发 3h
-- 部署到阿里云oss 5min，线上访问 https://react-test-01.oss-cn-guangzhou.aliyuncs.com
+- 部署到阿里云oss 5m，线上访问 https://react-test-01.oss-cn-guangzhou.aliyuncs.com
