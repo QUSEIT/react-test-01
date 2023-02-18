@@ -1,4 +1,4 @@
-## 使用
+## 本地开发
 
 ```bash
 yarn install
@@ -10,7 +10,8 @@ yarn start
 yarn build
 ```
 
+## 各阶段
 
-## 线上访问
-
-https://react-test-01.oss-cn-guangzhou.aliyuncs.com
+- 自主搭建环境配置 1.5h
+- 基于react ice开发 3h
+- 部署到阿里云oss 5min，线上访问 https://react-test-01.oss-cn-guangzhou.aliyuncs.com
