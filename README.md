@@ -20,7 +20,7 @@ pnpm run dev (启动服务)
 地址：https://learngit-sigma.vercel.app/ 或 http://1.12.43.172:9090/
 
 注: vercel的访问可能需要科学上网 腾讯云空间域名可以直接访问
-订单复制功在再非https域名下会报错 此功能在vercel空间下测试正常
+订单号复制功在非https域名下会报错 此功能在vercel空间下测试正常
 ```
 ## 3. 项目各阶段用时
 
