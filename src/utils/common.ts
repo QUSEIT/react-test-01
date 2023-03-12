@@ -10,11 +10,11 @@ export const limitOffsetPage = (currentPage : number,showCount: number) : { star
 
 export const getFilterData = (packageList : deliveryType[], paramData : deliveryProps['filterParam']) : deliveryType[] => {    
     const { startDate, endDate, status, searchName } = paramData
-    let filterData : deliveryType[] = packageList
+    let filterData : deliveryType[] = packageList    
     filterData = packageList.filter(v => {        
         let nameJudge = true; let StatusJude = true; let timeJudge = true;    
-        if( searchName.length > 0 ){
-            const regName = new RegExp(searchName);        
+        if( searchName.length > 0 ){            
+            const regName = new RegExp(searchName.toUpperCase());        
             nameJudge = (regName.test(v.receive_name) || regName.test(v.track_number) || regName.test(v.contact_tel + ''))
         }
         if( status > 0 ){                    

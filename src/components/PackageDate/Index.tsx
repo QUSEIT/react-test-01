@@ -32,8 +32,8 @@ const Index : React.FC<{}> = () => {
     },[])
 
     /* 
-    * startDate的时间戳调整为零点
-    * endDate的时间戳要调整下一天的零点
+    * startDate的时间戳需调整为零点
+    * endDate的时间戳需调整为23:59:59
     */
     const chooseAction = () => {      
       let startDate : DateProps = 0;let endDate : DateProps = 0

@@ -99,7 +99,7 @@ export const packageData = [{
 },{
     id: 13,
     server_name: '法邮海运',
-    track_number: 'EN0051HS028FR',
+    track_number: 'CN0051HS028FR',
     package_status: 3,
     receive_name: '韦丽丽',
     contact_tel: 15200030245,

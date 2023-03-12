@@ -20,10 +20,15 @@ const App = () => {
   const { filterData, currentPage, showCount } = useSelector((store : RootState) => store.delivery);
   const { menuStatus } = useSelector((store : RootState) => store.commonData);
 
+  /*
+  * showCount固定为5页
+  */
   const { start,end } = limitOffsetPage(currentPage,showCount);
 
+  // 对数据进行分页
   const packageList = filterData.slice(start,end);
 
+  // 模拟加载数据
   useEffect(() => {    
     dispatch(getDeliverData() as any);
   },[])
