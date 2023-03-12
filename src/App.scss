@@ -1,0 +1,20 @@
+.delivery-container{
+  .filter-content{
+    background-color: #fff;
+    padding: 20px 20px 0; 
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 99;   
+  }   
+  .package-content{
+    padding: 24px 24px 90px;
+    position: relative;
+    .data-tip{
+      display: block;
+      width: 294px;
+      height: 192px;   
+      margin: 50% auto;   
+    }
+  }
+} 

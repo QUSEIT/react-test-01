@@ -1,34 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { AnyAction } from "redux";
+import { RootState } from '@/redux/reducers/index'
+import PackageInfo from '@/components/PackageInfo/Index';
+import PackageDate from '@/components/PackageDate/Index';
+import SearchInfo from '@/components/SearchInfo/Index';
+import PackageStatus from '@/components/PackageStatus/Index';
+import MaskContent from '@/components/MaskContent/Index';
+import Footer from '@/components/Footer/Index';
+import { packageDetail as packageType  } from '@/constant/commonType';
+import { getDeliverData } from '@/redux/action/delivery';
+import { limitOffsetPage } from '@/utils/common';
+import noneTip from '@/assets/images/no-data.png'
+import './App.scss'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+
+  const dispatch = useDispatch();
+  const { filterData, currentPage, showCount } = useSelector((store : RootState) => store.delivery);
+  const { menuStatus } = useSelector((store : RootState) => store.commonData);
+
+  const { start,end } = limitOffsetPage(currentPage,showCount);
+
+  const packageList = filterData.slice(start,end);
+
+  useEffect(() => {    
+    dispatch(getDeliverData() as any);
+  },[])
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="delivery-container">
+      <div className="filter-content">
+        <SearchInfo />
+        <PackageDate />
+        <PackageStatus />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="package-content">
+        {
+          packageList.length > 0 ? packageList.map((d:packageType) => <PackageInfo key={d.id} packageDetail={d} />) : <img className="data-tip" src={noneTip} alt="无数据" />
+        }              
+      </div>      
+      <Footer />
+      {
+        menuStatus && <MaskContent />
+      }   
     </div>
   )
 }
 
-export default App
+export default App;
