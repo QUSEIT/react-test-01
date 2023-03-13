@@ -2,7 +2,7 @@
 
 ## 项目技术栈
 
-react + redux + vite + typescript
+react + redux + vite + typescript + design-mobile
 
 ## 1. 项目本地运行
 
