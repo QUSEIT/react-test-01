@@ -1,0 +1,51 @@
+/* 快递信息块 */
+  .package-block{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;    
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 8px #aaa;
+    margin-bottom: 24px;
+    .package-info{
+      width: calc(100% - 120px);
+      font-size: 24px;
+    }
+    .relate-order{
+      margin-bottom: 5px;
+    }
+    .package-info-list{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &:not(:last-child){
+        margin-bottom: 5px;
+      }
+      .copy-text{
+        width: 0;
+        height: 0;
+        position: absolute;
+      }
+    }
+    .package-action{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 80px;
+      .package-button{
+        width: 80px;
+        height: 60px;
+        padding: 0;
+        border: none;
+        font-size: 24px;
+        color: #fff;        
+        border-radius: 4px;
+        &.button-sheet{
+          background-color: #c8102e;
+        }
+        &.button-more{
+          background-color: #1989fa;
+        }
+      }
+    }
+  }

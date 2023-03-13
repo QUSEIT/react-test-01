@@ -1,0 +1,72 @@
+.date-model{
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	-ms-transform: scale(1.185);
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 2000px;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+    &.show{
+        margin-bottom: 0;
+        opacity: 1;
+        transition-duration: 0.3s;        
+        transform: scale(1);
+        overflow-x: hidden;
+        overflow-y: auto;
+        pointer-events: auto;
+    }
+    &::before{
+        content: "\200B";
+        display: inline-block;
+        height: 100%;
+        vertical-align: bottom;
+    }
+    .model-dialog{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;        
+        width: 100%;
+        max-width: 100%;
+        background-color: #f8f8f8;        
+        overflow: hidden;        
+    }    
+    .model-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        .action{        
+            margin-right: 0;            
+            font-size: 28px;
+            padding: 40px 20px;
+        }
+        .make-sure{
+            color: #39b54a;
+        }
+        .cancel{
+            color: #0081ff;
+        }
+    }
+    .model-content{
+        padding: 40px;
+    }
+    .adm-calendar-cell{        
+        height: 60px;
+        padding: 0px;
+        .adm-calendar-cell-bottom{
+            height: 15px;
+            line-height: 15px;        
+        }
+        .adm-calendar-cell-top{
+            font-size: 28px;    
+        }
+    }
+}

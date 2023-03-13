@@ -1,0 +1,26 @@
+.foot-page{
+    display: flex; 
+    background-color: #fff;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 28px;
+    .page-info{
+        flex: 1;
+        text-align: center;
+        line-height: 80px;
+    }
+    .page-number{
+        color: #aaa;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        font-size: 24px;
+    }
+    .page-disable {
+        color: #ccc
+    }
+    .page-active{
+        color: #5f66f0;
+    }
+}
